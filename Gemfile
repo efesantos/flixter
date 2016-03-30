@@ -50,3 +50,5 @@ gem 'bootstrap-sass'
 gem 'devise', '>= 3.2.4'
 
 gem 'simple_form'
+
+gem 'faker'

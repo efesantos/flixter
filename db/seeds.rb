@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+5.times do |n|
+  title = Faker::Lorem.word.capitalize
+  description = Faker::Lorem.paragraph(5)
+  cost = rand(0...10)
+  user_id = rand(1..2)
+
+  Course.create!(
+    title: title,
+    description: description,
+    cost: cost,
+    user_id: user_id 
+  )
+
+end
