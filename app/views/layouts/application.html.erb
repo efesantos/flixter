@@ -19,13 +19,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Flixter</a>
+          <a><%= link_to 'Flixter', root_path, class: 'navbar-brand' %></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to 'See all courses', courses_path %> <span class="sr-only">(current)</span></a></li>
+            <li><%= link_to 'See all courses', courses_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right pull-right">
             <li><%= link_to 'Log in', new_user_session_path %></li>
@@ -44,8 +44,7 @@
 
       <%= yield %>
 
-  </div>
-
+</div>
   <br class="clr" />  
 
   <div id="footer">
@@ -55,6 +54,7 @@
       <%= link_to 'Teach a course', new_instructor_course_path %>
     </div>
   </div>
+
 
 
 
