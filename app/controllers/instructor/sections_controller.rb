@@ -1,5 +1,7 @@
 class Instructor::SectionsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def new
     @course = Course.find(params[:course_id]) #Is this line really necessary??
     @section = Section.new
@@ -16,5 +18,7 @@ class Instructor::SectionsController < ApplicationController
     def section_params
       params.require(:section).permit(:title)
     end
+
+    
 
 end
