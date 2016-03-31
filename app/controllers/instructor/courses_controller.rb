@@ -1,6 +1,7 @@
 class Instructor::CoursesController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!
+  before_action :require_authorized_for_current_user, only: :show
 
   def new
     @course = Course.new
@@ -18,10 +19,20 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id])
   end
 
   private
+
+    def require_authorized_for_current_user
+      if current_user != current_course.user
+        return render text: 'Unauthorized', status: :unauthorized
+      end
+    end
+
+    helper_method :current_course
+    def current_course
+      @course ||= Course.find(params[:id])
+    end
 
     def course_params
       params.require(:course).permit(:title, :description, :cost)
