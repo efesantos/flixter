@@ -25,4 +25,4 @@ module Flixter
   end
 end
 
-require 'fog/aws'
+#require 'fog/aws'
