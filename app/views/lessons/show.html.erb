@@ -5,4 +5,7 @@
   <p>
     <%= current_lesson.subtitle %>
   </p>
+  <% if current_lesson.video %>
+    <%= video_tag current_lesson.video, class: 'img-responsive' %>
+  <% end %>
 </div>
