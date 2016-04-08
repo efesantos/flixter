@@ -14,9 +14,7 @@ class LessonsController < ApplicationController
     end
 
     def current_course
-      #current_section = current_lesson.section
       @current_course = current_lesson.section.course
-      #@current_course = current_section.course
     end
 
     def require_enrolled_for_current_course
