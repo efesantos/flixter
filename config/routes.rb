@@ -18,8 +18,9 @@ Rails.application.routes.draw do
     resources :enrollments, only: :create
   end
 
-
   resources :lessons, only: [:show]
+
+  resource :dashboard, only: [:show]
 
 
 
