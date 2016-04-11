@@ -57,9 +57,38 @@
 
   <div id="footer">
     <div class="container">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Teach a course', new_instructor_course_path %>
+      <div class="col-xs-12 col-sm-3">
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        efe_santos@hotmail.com
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Social</b>
+        <br />
+        <br />
+        <%= link_to 'http://github.com/efesantos' do %>
+          <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'https://www.linkedin.com/in/elmer-santos-07b76837' do %>
+          <%= image_tag 'linkedin.png', class: 'social-button' %>
+        <% end %>
+      </div>
     </div>
   </div>
 
