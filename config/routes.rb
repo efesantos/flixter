@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   root 'static_pages#index'
 
+  get 'privacy', to: 'static_pages#privacy'
+
   namespace :instructor do
     resources :lessons, only: [:update] 
     resources :sections, only: [:update] do

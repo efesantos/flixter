@@ -13,10 +13,6 @@ a.navbar-brand {
   color:white
 }
 
-.navbar-toggle {
-  background:white;
-}
-
 .hero {
   background: url('hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -142,4 +138,24 @@ ul .header .glyphicon {
 
 .lessons li p {
   margin:0;
+}
+
+.overview {
+  margin:10px;
+  padding:8px;
+  font-weight: 600;
+}
+
+.white {
+  color:white;
+}
+
+.fixed-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  height: 200px;
 }
